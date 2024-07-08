@@ -23,18 +23,16 @@ class _BannerWidgetState extends State<BannerWidget> {
         children: [
           CarouselSlider(
             items: imgList
-                .map((item) => Container(
-                      child: Center(
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(16.0),
-                          child: Image.asset(
-                            item,
-                            fit: BoxFit.cover,
-                            width: 1000,
-                          ),
-                        ),
-                      ),
-                    ))
+                .map((item) => Center(
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(16.0),
+                    child: Image.asset(
+                      item,
+                      fit: BoxFit.cover,
+                      width: 1000,
+                    ),
+                  ),
+                ))
                 .toList(),
             options: CarouselOptions(
               autoPlay: false,

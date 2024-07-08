@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:provider/provider.dart';
 import '../../controller/auth_service.dart';
-import '../login_screen.dart';
+import '../login/login_screen.dart';
 
 class DashboardScreen extends StatelessWidget {
   @override

@@ -5,18 +5,18 @@ import 'package:provider/provider.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'controller/auth_service.dart';
-import 'view/carts_screen.dart';
+import 'view/cart/carts_screen.dart';
 import 'controller/product_service.dart';
 import 'controller/cart_service.dart';
 import 'controller/order_service.dart';
 import 'controller/chat_service.dart';
 import 'view/admin/admin_dash.dart';
-import 'view/login_screen.dart';
+import 'view/login/login_screen.dart';
 import 'view/main_screen.dart';
-import 'view/home_screen.dart';
-import 'view/checkout_screen.dart';
-import 'view/order_confirm_screen.dart';
-import 'view/orders_screen.dart';
+import 'view/home/home_screen.dart';
+import 'view/cart/checkout_screen.dart';
+import 'view/order/order_confirm_screen.dart';
+import 'view/order/orders_screen.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'First App',
-        theme: ThemeData(primarySwatch: Colors.blue),
+        theme: ThemeData(scaffoldBackgroundColor: Colors.white),
         initialRoute: '/',
         routes: {
           '/': (context) => AuthWrapper(),

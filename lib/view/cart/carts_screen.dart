@@ -3,7 +3,7 @@ import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 import '/controller/cart_service.dart';
 import 'checkout_screen.dart';
-import '/model/product.dart'; // Your Product model
+import '/model/product.dart';
 
 class CartsScreen extends StatelessWidget {
   @override
@@ -114,7 +114,7 @@ class CartsScreen extends StatelessWidget {
                             );
                           },
                           style: ElevatedButton.styleFrom(
-                            primary: Colors.black, // Background color
+                            backgroundColor: Colors.black, // Background color
                             padding: EdgeInsets.symmetric(vertical: 16.0),
                           ),
                           child: Text('Checkout'),

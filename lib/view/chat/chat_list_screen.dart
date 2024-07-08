@@ -83,7 +83,6 @@ class ChatListScreen extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.black,
         onPressed: () async {
-          // Example admin ID and name; these should be retrieved from your actual admin data
           String adminId = 'HoOY18KK0ieSccSYeNVLOWyZYdi1';
           String adminName = 'admin1';
 
@@ -110,7 +109,7 @@ class ChatListScreen extends StatelessWidget {
             ),
           );
         },
-        child: Icon(Icons.add),
+        child: Icon(Icons.add, color: Colors.white,),
       ),
     );
   }

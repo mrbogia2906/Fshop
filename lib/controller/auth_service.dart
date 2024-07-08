@@ -20,7 +20,7 @@ class AuthService {
           'name': name,
           'email': email,
           'role':
-              'user', // Default role is user, can be set to 'admin' as needed
+              'user',
         });
 
         // Save user data to Hive
@@ -50,7 +50,7 @@ class AuthService {
         if (userSnapshot.exists) {
           var userData = userSnapshot.data() as Map<String, dynamic>;
 
-          // Save user data to Hive
+
           var userBox = Hive.box('userBox');
           userBox.put('userData', userData);
         }
@@ -65,7 +65,7 @@ class AuthService {
   Future<void> signOut() async {
     try {
       var userBox = Hive.box('userBox');
-      userBox.delete('userData'); // Clear user data on logout
+      userBox.delete('userData');
       return await _auth.signOut();
     } catch (e) {
       print(e.toString());

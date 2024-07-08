@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:hive/hive.dart';
 import '/controller/auth_service.dart';
-import 'login_screen.dart';
+import '../login/login_screen.dart';
 
 class ProfileScreen extends StatefulWidget {
   @override
@@ -172,9 +172,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
             (route) => false,
           );
         },
-        child: Text('Logout'),
+        child: Text('Logout', style: TextStyle(color: Colors.white),),
         style: ElevatedButton.styleFrom(
-          primary: Colors.black,
+          backgroundColor: Colors.black,
           minimumSize: Size.fromHeight(50),
         ),
       ),

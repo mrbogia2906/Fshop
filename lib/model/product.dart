@@ -18,7 +18,7 @@ class Product {
     required this.size,
     required this.quantity,
     required this.category,
-    required this.imageUrl, // Initialize imageUrl
+    required this.imageUrl,
   });
 
   factory Product.fromFirestore(DocumentSnapshot doc) {
@@ -31,7 +31,7 @@ class Product {
       size: data['size'] ?? '',
       quantity: data['quantity']?.toInt() ?? 0,
       category: data['category'] ?? '',
-      imageUrl: data['imageUrl'] ?? '', // Fetch imageUrl
+      imageUrl: data['imageUrl'] ?? '',
     );
   }
 
@@ -43,7 +43,7 @@ class Product {
       'size': size,
       'quantity': quantity,
       'category': category,
-      'imageUrl': imageUrl, // Include imageUrl in the map
+      'imageUrl': imageUrl,
     };
   }
 
@@ -56,7 +56,7 @@ class Product {
       size: data['size'] ?? '',
       quantity: data['quantity']?.toInt() ?? 0,
       category: data['category'] ?? '',
-      imageUrl: data['imageUrl'] ?? '', // Fetch imageUrl
+      imageUrl: data['imageUrl'] ?? '',
     );
   }
 }

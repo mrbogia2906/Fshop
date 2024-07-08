@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:provider/provider.dart';
-import 'home_screen.dart';
-import 'chat_list_screen.dart';
-import 'carts_screen.dart';
-import 'profile_screen.dart';
+import 'home/home_screen.dart';
+import 'chat/chat_list_screen.dart';
+import 'cart/carts_screen.dart';
+import 'profile/profile_screen.dart';
 import '/controller/auth_service.dart';
 
 class MainScreen extends StatefulWidget {

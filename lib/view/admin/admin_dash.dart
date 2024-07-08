@@ -1,5 +1,5 @@
-import '/view/chat_list_screen.dart';
-import '/view/profile_screen.dart';
+import '../chat/chat_list_screen.dart';
+import '../profile/profile_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'dashboard_screen.dart';

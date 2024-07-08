@@ -138,12 +138,12 @@ class OrderCard extends StatelessWidget {
                     );
                   },
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.black,
+                    backgroundColor: Colors.black,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                   ),
-                  child: Text('Detail'),
+                  child: Text('Detail', style: TextStyle(color: Colors.white),),
                 ),
                 Text(
                   order.status,

@@ -4,7 +4,7 @@ import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 import '/controller/order_service.dart';
 import '/model/order_model.dart';
-import 'order_confirm_screen.dart';
+import '../order/order_confirm_screen.dart';
 import '/controller/cart_service.dart';
 import '/model/product.dart';
 
@@ -25,7 +25,7 @@ class CheckoutScreen extends StatelessWidget {
 
     final order = Order1(
       id: '',
-      quantity: cart.items.length, // Total number of items
+      quantity: cart.items.length,
       totalAmount: totalAmount,
       status: 'processing',
       date: DateTime.now(),
@@ -72,7 +72,7 @@ class CheckoutScreen extends StatelessWidget {
           ListTile(
             title: Text('Nguyen Viet Khoa'),
             subtitle:
-                Text('Cau Giay, Ha Noi, Viet Nam, 100000'), // Example address
+                Text('Cau Giay, Ha Noi, Viet Nam, 100000'),
           ),
           Divider(),
           // Payment Method
@@ -141,7 +141,7 @@ class CheckoutScreen extends StatelessWidget {
                 _submitOrder(context);
               },
               style: ElevatedButton.styleFrom(
-                primary: Colors.black, // Background color
+                backgroundColor: Colors.black, // Background color
                 padding: EdgeInsets.symmetric(vertical: 16.0),
               ),
               child: Text('Submit Order'),

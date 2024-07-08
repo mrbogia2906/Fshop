@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'main_screen.dart';
+import '../main_screen.dart';
 
 class OrderConfirmationScreen extends StatelessWidget {
   @override
@@ -33,7 +33,7 @@ class OrderConfirmationScreen extends StatelessWidget {
                 Navigator.pushNamed(context, '/orders');
               },
               style: ElevatedButton.styleFrom(
-                primary: Colors.black,
+                backgroundColor: Colors.black,
                 padding: EdgeInsets.symmetric(vertical: 16.0),
               ),
               child: Text('TRACK YOUR ORDERS'),

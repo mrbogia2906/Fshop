@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '/controller/auth_service.dart';
 import 'login_screen.dart';
-import 'main_screen.dart';
+import '../main_screen.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
 class RegistrationScreen extends StatefulWidget {
@@ -125,7 +125,6 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                             });
 
                             if (user != null) {
-                              // Save user data to Hive after successful registration
                               var userBox = Hive.box('userBox');
                               userBox.put('userId', user.uid);
                               userBox.put('userName', _nameController.text);
@@ -150,7 +149,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                         },
                         child: Text('Sign Up'),
                         style: ElevatedButton.styleFrom(
-                          primary: Colors.black,
+                          backgroundColor: Colors.black,
                           padding: EdgeInsets.symmetric(
                               vertical: 16.0, horizontal: 80.0),
                         ),
@@ -164,25 +163,25 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 //     IconButton(
                 //       icon: Icon(Icons.g_translate),
                 //       onPressed: () {
-                //         // Implement Google sign-up logic
+                //
                 //       },
                 //     ),
                 //     IconButton(
                 //       icon: Icon(Icons.facebook),
                 //       onPressed: () {
-                //         // Implement Facebook sign-up logic
+                //
                 //       },
                 //     ),
                 //     IconButton(
                 //       icon: Icon(Icons.apple),
                 //       onPressed: () {
-                //         // Implement Apple sign-up logic
+                //
                 //       },
                 //     ),
                 //     IconButton(
                 //       icon: Icon(Icons.close),
                 //       onPressed: () {
-                //         // Implement other sign-up logic
+                //
                 //       },
                 //     ),
                 //   ],

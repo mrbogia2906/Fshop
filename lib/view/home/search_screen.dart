@@ -19,7 +19,7 @@ class _SearchScreenState extends State<SearchScreen> {
   @override
   void initState() {
     super.initState();
-    fetchSuggestedProducts(); // Fetch the initial suggested products
+    fetchSuggestedProducts();
   }
 
   void fetchSuggestedProducts() async {

@@ -1,8 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart'; // Import the intl package for currency formatting
+import 'package:intl/intl.dart'; //package for currency formatting
 
-import '../order_detail_screen.dart';
+import '../order/order_detail_screen.dart';
 import '../../model/order_model.dart';
 import '../../controller/order_service.dart';
 
@@ -94,7 +94,7 @@ class OrderCard extends StatelessWidget {
                   ElevatedButton(
                     onPressed: () => onUpdateStatus('canceled'),
                     child: Text('Cancel'),
-                    style: ElevatedButton.styleFrom(primary: Colors.red),
+                    style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
                   ),
                 ],
               ),

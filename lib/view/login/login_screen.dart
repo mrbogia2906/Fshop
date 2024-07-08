@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import '/controller/auth_service.dart';
-import 'main_screen.dart';
-import 'admin/admin_dash.dart';
+import '../main_screen.dart';
+import '../admin/admin_dash.dart';
 import 'registration_screen.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -132,7 +132,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     },
                     child: Text('Sign In'),
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.black,
+                      backgroundColor: Colors.black,
                       padding: EdgeInsets.symmetric(
                           vertical: 16.0, horizontal: 80.0),
                     ),
@@ -146,19 +146,19 @@ class _LoginScreenState extends State<LoginScreen> {
             //     IconButton(
             //       icon: Icon(Icons.facebook),
             //       onPressed: () {
-            //         // Implement Facebook sign-in logic
+            //
             //       },
             //     ),
             //     IconButton(
             //       icon: Icon(Icons.apple),
             //       onPressed: () {
-            //         // Implement Apple sign-in logic
+            //
             //       },
             //     ),
             //     IconButton(
             //       icon: Icon(Icons.close),
             //       onPressed: () {
-            //         // Implement other sign-in logic
+            //
             //       },
             //     ),
             //   ],

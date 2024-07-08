@@ -145,7 +145,7 @@ class _CreateProductScreenState extends State<CreateProductScreen> {
                             );
                             await productService.addProduct(product);
                             Navigator.of(context)
-                                .pop(); // Optionally pop back after saving
+                                .pop();
                           } catch (e) {
                             ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                               content: Text('Failed to add product: $e'),

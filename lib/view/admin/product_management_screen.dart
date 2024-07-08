@@ -5,7 +5,7 @@ import 'package:provider/provider.dart';
 import '../../model/product.dart';
 import '../../controller/product_service.dart';
 import 'create_product_screen.dart';
-import 'update_product_screen.dart'; // Import the update product screen
+import 'update_product_screen.dart';
 
 class ProductManagementScreen extends StatelessWidget {
   @override

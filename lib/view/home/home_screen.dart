@@ -24,7 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         backgroundColor: Color.fromARGB(255, 250, 250, 250),
         elevation: 0,
-        title: Text(
+        title: Text( 
           'Find your clothes',
           style: TextStyle(color: Colors.black),
         ),
@@ -173,8 +173,7 @@ class CategoryButton extends StatelessWidget {
       child: TextButton(
         onPressed: onPressed,
         style: TextButton.styleFrom(
-          backgroundColor: isSelected ? Colors.black : Colors.grey[200],
-          primary: isSelected ? Colors.white : Colors.black,
+          foregroundColor: isSelected ? Colors.white : Colors.black, backgroundColor: isSelected ? Colors.black : Colors.grey[200],
         ),
         child: Text(text),
       ),

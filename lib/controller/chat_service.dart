@@ -44,7 +44,7 @@ class ChatService {
       'lastMessage': '',
       'userName': userName,
       'adminName': adminName,
-      'adminId': adminId, // Ensure adminId is included
+      'adminId': adminId,
       'timestamp': FieldValue.serverTimestamp(),
     });
     return chatDoc.id;

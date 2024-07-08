@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 import '/controller/cart_service.dart';
-import '/model/product.dart'; // Make sure to import your Product model
+import '/model/product.dart';
 
 class ProductDetailsScreen extends StatelessWidget {
   final Product product;
 
   ProductDetailsScreen(
-      {required this.product}); // Constructor accepts a Product object
+      {required this.product});
 
   @override
   Widget build(BuildContext context) {
@@ -45,25 +45,24 @@ class ProductDetailsScreen extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(16.0),
               image: DecorationImage(
-                image: NetworkImage(product.imageUrl), // Use product image URL
+                image: NetworkImage(product.imageUrl),
                 fit: BoxFit.cover,
               ),
             ),
           ),
           SizedBox(height: 16),
           Text(
-            product.name, // Use product name
+            product.name,
             style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
           ),
           SizedBox(height: 8),
           Row(
             children: [
               Text(
-                formattedPrice, // Use product price
+                formattedPrice,
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
               SizedBox(width: 16),
-              // Example: Placeholder for rating and reviews
               Row(
                 children: [
                   Icon(Icons.star, color: Colors.amber),
@@ -79,12 +78,12 @@ class ProductDetailsScreen extends StatelessWidget {
           ),
           SizedBox(height: 8),
           Wrap(
-            spacing: 8.0, // Space between chips
+            spacing: 8.0,
             children: ['S', 'M', 'L', 'XL', 'XXL']
                 .map((size) => ChoiceChip(
                       label: Text(size),
                       selected:
-                          size == 'M', // Example: Select size 'M' by default
+                          size == 'M',
                       onSelected: (selected) {},
                     ))
                 .toList(),
@@ -124,9 +123,9 @@ class ProductDetailsScreen extends StatelessWidget {
               ),
             ),
             controller: TextEditingController(
-                text: product.productInfo), // Use product info
+                text: product.productInfo),
             maxLines: 4,
-            readOnly: true, // Make it read-only if just displaying
+            readOnly: true,
           ),
           SizedBox(height: 16),
           SizedBox(
@@ -137,10 +136,10 @@ class ProductDetailsScreen extends StatelessWidget {
                 cart.addItem(product);
               },
               style: ElevatedButton.styleFrom(
-                primary: Colors.black, // Background color
+                backgroundColor: Colors.black,
                 padding: EdgeInsets.symmetric(vertical: 16.0),
               ),
-              child: Text('Add to Cart'),
+              child: Text('Add to Cart', style: TextStyle(color: Colors.white),),
             ),
           ),
         ],
